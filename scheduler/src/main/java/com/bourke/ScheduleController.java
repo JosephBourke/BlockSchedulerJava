@@ -33,10 +33,15 @@ public class ScheduleController {
                 data.add(ta.getText());                
             }
         }
+
+        FileHandler fh = new FileHandler();
+        fh.SaveObject(data, Constants.saveLocation);
         System.out.println(data);
         return data;
     }
 
+
+    
 
 
 }
