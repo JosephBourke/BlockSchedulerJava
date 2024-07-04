@@ -19,7 +19,14 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("schedule"), 640, 480);
         stage.setScene(scene);
+        stage.setTitle("Schedule");
         stage.show();
+    }
+
+
+    @Override
+    public void stop(){
+        System.out.println("Application Closing");
     }
 
     static void setRoot(String fxml) throws IOException {

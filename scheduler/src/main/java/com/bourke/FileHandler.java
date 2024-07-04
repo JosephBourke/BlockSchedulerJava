@@ -2,7 +2,6 @@ package com.bourke;
 
 import javafx.fxml.FXMLLoader;
 import java.io.*;
-import java.nio.*;
 
 public class FileHandler {
 
