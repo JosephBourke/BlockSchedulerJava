@@ -5,11 +5,12 @@ import java.io.*;
 
 public class FileHandler {
 
-    private ObjectOutputStream out;
+    
 
 
     public void SaveObject(Serializable object, String location){
         FileOutputStream file = null;
+        ObjectOutputStream out = null;
         try {
             file = new FileOutputStream(location);
             out = new ObjectOutputStream(file);
@@ -27,7 +28,7 @@ public class FileHandler {
                 file.close();
                 out.close();
             } catch (Exception e) {
-                // TODO: handle exception
+                e.printStackTrace();
             }
         }
     }
@@ -52,7 +53,7 @@ public class FileHandler {
                 in.close();
                 file.close();
             } catch (Exception e) {
-                // TODO: handle exception
+                e.printStackTrace();
             }
         }
 
